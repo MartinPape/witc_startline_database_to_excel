@@ -13,7 +13,7 @@ rm -f $BASE_DIR/backup-db/.htaccess
 rm -f $BASE_DIR/backup-db/index.php
 find $BASE_DIR/backup-db/* -mtime +60 -exec rm {} \;
 cd $BASE_DIR/backup-db
-LASTEST_ARCHIVE=`ls -r *.gz | head -1`
+LASTEST_ARCHIVE=`ls -t *.gz | head -1`
 echo "Latest archive is: $LASTEST_ARCHIVE"
 cd ..
 rm -rf $BASE_DIR/import/*
